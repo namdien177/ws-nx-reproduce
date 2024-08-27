@@ -1,0 +1,19 @@
+{
+  "name": "js-dom",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/js-dom/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/js-dom",
+        "main": "libs/js-dom/src/index.ts",
+        "tsConfig": "libs/js-dom/tsconfig.lib.json",
+        "assets": ["libs/js-dom/*.md"]
+      }
+    }
+  }
+}

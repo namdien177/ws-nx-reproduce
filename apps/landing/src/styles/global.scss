@@ -1,0 +1,35 @@
+@import "@monthly-party/shadcn/styles.css";
+
+@layer base {
+  :root {
+    --gradiant-landing-from: #6e22ed;
+    --gradiant-landing-to: #ffffff;
+  }
+
+  .dark {
+    --gradiant-landing-from: #9a6fe1;
+    --gradiant-landing-to: #030711;
+  }
+}
+
+@layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+
+    .gradiant-landing {
+      @apply transition-all duration-500;
+      background: linear-gradient(
+        180deg,
+        var(--gradiant-landing-from) 0%,
+        var(--gradiant-landing-to) 100%
+      );
+    }
+  }
+}
